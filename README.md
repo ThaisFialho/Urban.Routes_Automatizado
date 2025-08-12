@@ -11,6 +11,19 @@ O objetivo foi aprender e praticar automação de testes em uma aplicação web 
 
 ---
 
+📌 Funcionalidades Testadas
+
+- Definição dos endereços de origem e destino na interface
+- Seleção do plano Comfort disponível
+- Validação do preenchimento do número de telefone com SMS
+- Inserção e validação do cartão de crédito para pagamento
+- Inclusão de comentários opcionais para o motorista
+- Solicitação de itens extras como cobertor e lenços
+- Pedido de sorvetes 
+- Verificação da janela modal de busca e escolha do carro disponível
+
+---
+
 ## ✅ Resultado
 
 Os testes foram organizados em módulos claros, aplicando o padrão **POM** para manter o código limpo e de fácil manutenção.
