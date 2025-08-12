@@ -11,7 +11,7 @@ O objetivo foi aprender e praticar automação de testes em uma aplicação web 
 
 ---
 
-## 📌 Funcionalidades Testadas
+## 📌 Funcionalidades testadas
 
 - Definição dos endereços de origem e destino na interface
 - Seleção do plano Comfort disponível
