@@ -28,6 +28,37 @@ O objetivo foi aprender e praticar automação de testes em uma aplicação web 
 
 Os testes foram organizados em módulos claros, aplicando o padrão **POM** para manter o código limpo e de fácil manutenção.
 
+### Exemplo de teste automatizado com Selenium + Page Object Model
+```python
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+import data
+from pages import UrbanRoutesPage
+
+class TestUrbanRoutes:
+
+    @classmethod
+    def setup_class(cls):
+        options = Options()
+        options.set_capability("goog:loggingPrefs", {"performance": "ALL"})
+        cls.driver = webdriver.Chrome(
+            service=Service(ChromeDriverManager().install()), 
+            options=options
+        )
+        cls.driver.implicitly_wait(5)
+
+    def test_set_route(self):
+        self.driver.get(data.URBAN_ROUTES_URL)
+        urban_routes = UrbanRoutesPage(self.driver)
+        address_from = data.ADDRESS_FROM
+        address_to = data.ADDRESS_TO
+        urban_routes.set_route(address_from, address_to)
+        assert urban_routes.get_from_field() == address_from
+        assert urban_routes.get_to_field() == address_to
+```
+
 Testes automatizados para todo o processo de pedido de táxi no Urban Routes:
 
 - Definir endereços de partida e destino
