@@ -104,3 +104,4 @@ Por isso, para executar os testes localmente seria necessário ter acesso ao mes
 Mesmo sem execução imediata, o código demonstra o design dos testes e a aplicação das ferramentas e boas práticas de automação.
 
 ---
+![Execução de script Python com Selenium WebDriver para abrir navegador e validar funcionalidades do Urban Routes](Gif_UrbanRoutes.gif)
